@@ -1,0 +1,48 @@
+name: Support question
+description: Ask a public Rove support question
+title: "Question: "
+labels: ["type: question", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only for questions that are safe to discuss publicly.
+        Private account, payment, deletion, security, or diagnostic requests should use private support instead.
+  - type: checkboxes
+    id: public-check
+    attributes:
+      label: Public posting check
+      options:
+        - label: This question is safe to post publicly.
+          required: true
+        - label: This is not a private account, payment, deletion, security, or sensitive diagnostic request.
+          required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Getting started
+        - Browser / SFTP
+        - Shell / terminal
+        - Composer / runner
+        - Account / entitlement
+        - Sync / backup
+        - Documentation
+        - Other / unsure
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Ask the question clearly, without private details.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Non-private context
+      description: Add only public-safe context that may help answer the question.
+    validations:
+      required: false
