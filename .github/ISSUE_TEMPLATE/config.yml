@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private account or billing support
+    url: https://www.jarsoft.co.nz/support
+    about: Do not file private account, billing, entitlement, deletion, or sensitive diagnostic requests publicly.
+  - name: Security report
+    url: https://www.jarsoft.co.nz/security
+    about: Do not disclose security vulnerability details in public GitHub issues.
