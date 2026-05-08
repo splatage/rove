@@ -1,0 +1,53 @@
+name: Feature request
+description: Suggest an improvement or new capability for Rove
+title: "Feature: "
+labels: ["type: feature", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement.
+
+        Please describe the user problem and the smallest useful version of the feature. Rove favors explicit, conservative behavior and avoids hidden command execution or silent configuration changes.
+  - type: checkboxes
+    id: public-safety
+    attributes:
+      label: Public safety check
+      options:
+        - label: This request does not include private or sensitive information.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What should Rove do?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries or non-goals
+      description: What should this feature avoid doing?
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product area
+      options:
+        - Browser / SFTP
+        - Shell / terminal
+        - Composer / runner
+        - Account / entitlement
+        - Sync / backup
+        - Documentation
+        - Other / unsure
+    validations:
+      required: true
