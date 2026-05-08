@@ -1,0 +1,36 @@
+name: Documentation issue
+description: Report a problem with Rove documentation
+title: "Docs: "
+labels: ["type: docs", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for improving the Rove documentation.
+        Keep public issues safe and avoid private details.
+  - type: checkboxes
+    id: public-check
+    attributes:
+      label: Public posting check
+      options:
+        - label: This issue is safe to post publicly.
+          required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or topic
+      description: Link or name the documentation page/topic if known.
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: What needs to be improved?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+    validations:
+      required: false
