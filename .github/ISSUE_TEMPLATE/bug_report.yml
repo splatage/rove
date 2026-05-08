@@ -1,0 +1,79 @@
+name: Bug report
+description: Report something in Rove that is not working as expected
+title: "Bug: "
+labels: ["type: bug", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug.
+
+        Do not include private account data, credentials, sensitive diagnostics, private infrastructure details, billing details, or account-deletion requests in public GitHub issues.
+
+        Redact screenshots and logs before attaching them.
+  - type: checkboxes
+    id: public-safety
+    attributes:
+      label: Public safety check
+      options:
+        - label: I have removed private or sensitive information from this report.
+          required: true
+        - label: This is not an account deletion, billing, entitlement, security, or private diagnostic request.
+          required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - Linux
+        - Backend / account service
+        - Documentation
+        - Other / unsure
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: Rove version
+      description: Use the app version/build number if available.
+      placeholder: "Example: 1.0.0+12"
+    validations:
+      required: false
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest safe steps that reproduce the issue.
+      placeholder: |
+        1. Open ...
+        2. Tap ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional non-sensitive context
+      description: Add redacted screenshots or short redacted log excerpts only if they are safe to share publicly.
+    validations:
+      required: false
